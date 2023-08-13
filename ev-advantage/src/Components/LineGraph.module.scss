@@ -1,0 +1,210 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+@keyframes fadeInGraph {
+    0% {
+      opacity: 0; /* Start with opacity 0 */
+      transform: translateY(-10px); /* Move the graph slightly up */
+    }
+    100% {
+      opacity: 1; /* End with opacity 1 */
+      transform: translateY(0); /* Return to original position */
+    }
+}
+
+
+
+
+#LineGraph {
+    display: flex;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+
+
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    > .Graph {
+        display: flex;
+        position: relative;
+        height: fit-content;
+        width: 60%;
+
+
+        flex-direction: column;
+
+
+        opacity: 1;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+
+
+        > h2 {
+            width: 90%;
+            > .TimeFrame {
+                color: rgb(0, 80, 252);
+            }
+        }
+
+
+        animation: fadeInGraph 0.5s ease; /* Adjust the duration and easing as needed */
+    }
+
+
+    > .Stats {
+        display: flex;
+        position: relative;
+        height: fit-content;
+        width: 40%;
+
+
+        flex-direction: column;
+
+
+        > h2 {
+            margin-bottom: 0;
+            > .Location {
+                color: rgb(0, 80, 252);
+            }
+        }
+
+
+        > .Relative {
+            font-size: 0.8em;
+            color: rbga(#000000, 0.5);
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 1em;
+        }
+    }
+
+
+    h2 {
+        font-size: 1.3em;
+    }
+}
+
+
+$table-background-color: #f0f0f0;
+$border-color: #d3d3d3;
+$border-radius: 10px;
+$padding: 10px;
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: $border-radius;
+    background-color: $table-background-color;
+}
+
+
+td {
+    padding: $padding;
+    border-bottom: 1px solid $border-color;
+}
+
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+.ArrowDown, .ArrowUp, .Neutral {
+    position: absolute;
+    right: -50px;
+    transition: opacity 0.5s ease;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    background-color: transparent;
+
+
+    opacity: 1;
+}
+
+
+.ArrowDown {
+    border-top-color: #da0000;
+}
+
+
+.ArrowUp {
+    border-bottom-color: #00cc00;
+}
+
+
+.Neutral {
+    border-left-color: rgba(#000000, 0.5);
+    right: -60px;
+}
+
+
+/* Keyframes animation for arrow appearance */
+@keyframes fadeInArrow {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(-10px); /* Move the arrow slightly up */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 */
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+
+/* Apply the animation on the arrows */
+.ArrowDown, .ArrowUp, .Neutral {
+    animation: fadeInArrow 0.5s ease; /* Adjust the duration and easing as needed */
+}
+
+
+.Location, .TimeFrame {
+    color: rgb(0, 80, 252);
+    font-weight: bold;
+}
+
+
+.Minor {
+    display: flex;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    font-size: 1em;
+    gap: 1em;
+}
+
+
+p {
+    font-size: 0.8em;
+}
+
+
+img {
+    display: block;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.InfoTable {
+    right: 0.5em;
+    transform: translateY(10px)
+}
+
+
+#Calculations {
+    display: block;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+}

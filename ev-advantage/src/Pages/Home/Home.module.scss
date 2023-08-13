@@ -1,0 +1,163 @@
+#Home {
+    display: flex;
+    position: relative;
+    height: fit-content;
+
+
+    flex-direction: column;
+    margin: 2em;
+    justify-content: center;
+    align-items: center;
+
+
+    > #CenterPanel {
+        display: flex;
+        position: relative;
+        height: fit-content;
+        width: 60%;
+
+
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+
+
+        > .Header {
+            display: flex;
+            position: relative;
+            height: fit-content;
+            width: 100%;
+
+
+            flex-direction: column;
+
+
+            text-align: center;
+            gap: 0;
+            margin: 0;
+
+
+            > .Major {
+                margin-bottom: 0;
+                font-weight: 500;
+
+
+                > .Advantage {
+                    color: rgb(0, 163, 54);
+                }
+            }
+
+
+            > .Minor {
+                margin: 0;
+                font-weight: 500;
+                font-size: 0.8em;
+
+
+                > .BoaConstructors {
+                    color: rgb(109, 0, 51);
+                }
+            }
+
+
+            > .VehicleName {
+                margin: 0.5em;
+                font-weight: 400;
+                font-size: 1em;
+                margin-bottom: 0;
+            }
+
+
+            > .Location {
+                margin: 0em;
+                font-weight: 400;
+                font-size: 1em;
+            }
+        }
+
+
+        > .Graphs {
+            display: flex;
+            position: relative;
+            height: fit-content;
+            width: 100%;
+
+
+            flex-direction: column;
+            padding: 1em;
+            padding-top: 0;
+
+
+            > .GraphsHeader {
+                display: flex;
+                position: relative;
+                height: fit-content;
+                width: 100%;
+
+
+                font-size: 0.9em;
+                > .YourActivity {
+                    display: block;
+                    position: relative;
+                    height: fit-content;
+                    width: 100%;
+                    
+                    font-weight: 400;
+                    margin: 0.5em 0;
+                }
+            }
+
+
+            > .Select {
+                display: block;
+                position: relative;
+                height: fit-content;
+                width: 100%;
+                margin: 0.5em 0;
+                color: rgba(#000000, 0.7);
+                font-size: 0.9em;
+                font-weight: 400;
+            }
+
+
+            > .Selections {
+                display: flex;
+                position: relative;
+                height: fit-content;
+                width: 100%;
+
+
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1em;
+                margin-bottom: 0.5em;
+                > .Button {
+                    display: block;
+                    position: relative;
+                    height: 2.6em;
+                    width: 4em;
+
+
+                    padding: 0.5em;
+                    border-radius: 1em;
+
+
+                    border: none;
+                    &:hover {
+                        background-color: rgba(#000000, 0.1);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#StateSelect {
+    border-radius: 1em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    width: 50%;
+}
